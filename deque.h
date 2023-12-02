@@ -12,9 +12,30 @@
 
 class deque{
  private:
+  int queueSize;
 
  public:
-  
+  deque();
+
+  ~deque();
+
+  void push_front();
+
+  void pop_front();
+
+  void push_back();
+
+  void pop_back();
+
+  front();
+
+  back();
+
+  bool empty();
+
+  int size();
+
+  operator[](int position);
 };
 
 #endif //DEQUE_H
