@@ -34,14 +34,56 @@ int main() {
 }
 
 void userOperation(int input){
+  int decision;
   if(input == 1){
-
+    cout << "What will be put to the front?: ";
+    cin >> decision;
+    dQ.push_front(decision);
+    cout << "Data pushed front." << endl;
+  }
+  else if(input == 2){
+    cout << "What will be put to the back?: ";
+    cin >> decision;
+    dQ.push_back(decision);
+    cout << "Data pushed back." << endl;
+  }
+  else if(input == 3){
+    cout << "Deleting front data..." << endl;
+    dQ.pop_front();
+    cout << "Data deleted." << endl;
+  }
+  else if(input == 4){
+    cout << "Deleting back data..." << endl;
+    dQ.pop_back();
+    cout << "Data deleted." << endl;
   }
   else if(input == 5){
-    int decision;
     cout << "How many ints would you like to input?: ";
     cin >> decision;
+    cout << "Entering data..." << endl;
     autoEnter(decision);
+    cout << "Data entered." << endl;
+  }
+  else if(input == 6){
+    cout << "The front value is " << dQ.front() << "." endl;
+  }
+  else if(input == 7){
+    cout << "The back value is " << dQ.back() << "." << endl;
+  }
+  else if(input == 8){
+    cout << "The size of the deque is " << dQ.size() << "." << endl;
+  }
+  else if(input == 9){
+    if(dQ.empty())
+      cout << "The deque is empty." << endl;
+    else
+      cout << "The deque is not empty." << endl;
+  }
+  else if(input == 0){
+    cout << "Exiting program..." << endl;
+  }
+  else{
+    cout << "Invalid Input." << endl;
   }
 }
 
