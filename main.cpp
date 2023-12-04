@@ -12,9 +12,22 @@
 
 using namespace std;
 
+void userOperation(int input);
+
+void autoEnter(int num);
+
 int main() {
   deque dQ;
   
   
   return 0;
+}
+
+void userOperation(int input){
+
+}
+
+void autoEnter(int num){
+  for(int i=0; i<num; i++)
+    dQ.push_pack(i);
 }
