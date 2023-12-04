@@ -28,11 +28,11 @@ class deque{
 
   ~deque();
 
-  void push_front();
+  void push_front(int num);
 
   void pop_front();
 
-  void push_back();
+  void push_back(int num);
 
   void pop_back();
 
