@@ -12,8 +12,17 @@
 
 class deque{
  private:
-  int queueSize;
+  int** blockMap;
+  
+  int amount;
 
+  int mapsize = 10;
+  const static int blocksize = 20;
+
+  int firstBlock;
+  int firstElement;
+
+  void reSize();
  public:
   deque();
 
@@ -27,15 +36,15 @@ class deque{
 
   void pop_back();
 
-  front();
+  int front();
 
-  back();
+  int back();
 
   bool empty();
 
   int size();
 
-  operator[](int position);
+  int &operator[](unsigned int position);
 };
 
 #endif //DEQUE_H
