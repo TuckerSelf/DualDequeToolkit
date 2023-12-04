@@ -8,10 +8,12 @@
  */
 
 #include <iostream>
+#include "deque.h"
 
 using namespace std;
 
 int main() {
+  deque dQ;
   
   
   return 0;
