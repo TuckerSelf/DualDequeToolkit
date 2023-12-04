@@ -12,8 +12,30 @@
 
 using namespace std;
 
+
+/**
+ * takes user input and does appropriate opperation
+ *
+ * @param deque dQ the deque
+ * @param int input the user input
+ * @pre 
+ * @return void 
+ * @post 
+ * 
+ */
 void userOperation(deque dQ, int input);
 
+
+/**
+ * automates push_back from 0 to given input
+ *
+ * @param deque dQ the deque
+ * @param int num the given input
+ * @pre 
+ * @return void 
+ * @post 
+ * 
+ */
 void autoEnter(deque dQ, int num);
 
 int main() {
