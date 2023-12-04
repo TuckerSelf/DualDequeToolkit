@@ -12,12 +12,12 @@
 
 using namespace std;
 
-void userOperation(int input);
+void userOperation(deque dQ, int input);
 
-void autoEnter(int num);
+void autoEnter(deque dQ, int num);
 
 int main() {
-  deque dQ;
+  deque mainDQ;
   int userChoice;
 
   cout << "Welcome to the Deque Toolkit. What operation would you like to do?: " << endl
@@ -28,12 +28,12 @@ int main() {
        << "Exit Program: 0" << endl << "Your Choice: ";
   cin >> userChoice;
 
-  userOperation(userChoice);
+  userOperation(mainDQ, userChoice);
   
   return 0;
 }
 
-void userOperation(int input){
+void userOperation(deque dQ, int input){
   int decision;
   if(input == 1){
     cout << "What will be put to the front?: ";
@@ -61,11 +61,11 @@ void userOperation(int input){
     cout << "How many ints would you like to input?: ";
     cin >> decision;
     cout << "Entering data..." << endl;
-    autoEnter(decision);
+    autoEnter(dQ, decision);
     cout << "Data entered." << endl;
   }
   else if(input == 6){
-    cout << "The front value is " << dQ.front() << "." endl;
+    cout << "The front value is " << dQ.front() << "." << endl;
   }
   else if(input == 7){
     cout << "The back value is " << dQ.back() << "." << endl;
@@ -87,7 +87,7 @@ void userOperation(int input){
   }
 }
 
-void autoEnter(int num){
+void autoEnter(deque dQ, int num){
   for(int i=0; i<num; i++)
-    dQ.push_pack(i);
+    dQ.push_back(i);
 }
