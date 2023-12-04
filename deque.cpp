@@ -99,7 +99,7 @@ void deque::push_back(int num){
   else if(row==mapsize-1 && col==blocksize-1){
     reSize();
     amount++;
-    row = firstblock+( (firstElement+amount) / blocksize);
+    row = firstBlock +( (firstElement+amount) / blocksize);
     blockMap[row][0] = num;
   }
   else if(col==blocksize-1){
